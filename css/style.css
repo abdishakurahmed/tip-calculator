@@ -20,9 +20,17 @@ main {
   display: flex;
   justify-content: center;
   border: 1px solid saddlebrown;
+  padding: 10px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+}
+
+div#results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 20px;
 }
