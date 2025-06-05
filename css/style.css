@@ -34,3 +34,13 @@ div#results {
   justify-content: space-evenly;
   padding-left: 20px;
 }
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
