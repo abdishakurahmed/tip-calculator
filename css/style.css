@@ -28,11 +28,13 @@ main {
   justify-content: center;
   border: 1px solid saddlebrown;
   padding: 10px;
+  width: 100%;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 div#results {
@@ -40,10 +42,10 @@ div#results {
   flex-direction: column;
   justify-content: space-evenly;
   padding-left: 20px;
+  width: 100%;
 }
 
 input {
-  width: 100%;
   padding: 12px 15px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
