@@ -61,3 +61,15 @@ input:focus {
   outline: none;
   transition: border 150ms ease-in-out;
 }
+
+p {
+  display: flex;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+span {
+  margin-left: auto;
+  font-weight: 700;
+  align-items: center;
+}
