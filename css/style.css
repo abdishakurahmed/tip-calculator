@@ -39,9 +39,11 @@ form {
 div#results {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding-left: 20px;
   width: 100%;
+  margin-bottom: 40px;
+  margin-top: 10px;
 }
 
 input {
