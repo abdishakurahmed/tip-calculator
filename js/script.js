@@ -13,7 +13,7 @@ const PerPersonDisplay = document.getElementById("per-person");
 
 function tipCalculator() {
   // select the input values and stored in a variable
-  const billInputValue = billInput.value;
-  const tipInputValue = tipInput.value;
-  const peopleInputValue = peopleInput.value;
+  const billInputValue = Number(billInput.value.trim());
+  const tipInputValue = Number(tipInput.value.trim());
+  const peopleInputValue = Number(peopleInput.value.trim());
 }
