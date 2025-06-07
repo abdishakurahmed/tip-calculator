@@ -17,3 +17,7 @@ function tipCalculator() {
   const tipInputValue = Number(tipInput.value.trim());
   const peopleInputValue = Number(peopleInput.value.trim());
 }
+
+function checkNumber(num) {
+  return /^\s*-?\d+(\.\d+)?\s*$/.test(num);
+}
