@@ -39,6 +39,7 @@ function tipCalculator() {
     para.textContent =
       "please enter a positive number or percent less than or equal to 100";
   } else {
+    para.textContent = "";
     tipAmountDisplay.textContent = `$${billInputValue * (tipInputValue / 100)}`;
     totalAmountDisplay.textContent = `$${
       billInputValue * (tipInputValue / 100) + billInputValue
