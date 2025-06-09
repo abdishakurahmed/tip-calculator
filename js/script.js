@@ -14,15 +14,15 @@ const PerPersonDisplay = document.getElementById("per-person");
 // result div for adding paragraph to it if any errors occur
 const resultDiv = document.querySelector("#results");
 
+const para = document.createElement("p");
+resultDiv.appendChild(para);
+
 function tipCalculator() {
   // select the input values and stored in a variable
   const billInputValue = Number(billInput.value.trim());
-  const tipInputValue = Number(tipInput.value.trim()) / 100;
+  const tipInputValue = Number(tipInput.value.trim());
   // console.log(tipInputValue);
   const peopleInputValue = Number(peopleInput.value.trim());
-
-  const para = document.createElement("p");
-  resultDiv.appendChild(para);
 
   if (
     Number.isNaN(billInputValue) ||
@@ -33,16 +33,19 @@ function tipCalculator() {
   } else if (
     billInputValue <= 0 ||
     tipInputValue <= 0 ||
-    peopleInputValue <= 0
+    peopleInputValue <= 0 ||
+    tipInputValue > 100
   ) {
-    para.textContent = "please enter a positive number";
+    para.textContent =
+      "please enter a positive number or percent less than or equal to 100";
   } else {
-    tipAmountDisplay.textContent = `$${billInputValue * tipInputValue}`;
+    tipAmountDisplay.textContent = `$${billInputValue * (tipInputValue / 100)}`;
     totalAmountDisplay.textContent = `$${
-      billInputValue * tipInputValue + billInputValue
+      billInputValue * (tipInputValue / 100) + billInputValue
     }`;
     PerPersonDisplay.textContent = `$${
-      (billInputValue * tipInputValue + billInputValue) / peopleInputValue
+      (billInputValue * (tipInputValue / 100) + billInputValue) /
+      peopleInputValue
     }`;
   }
 }
