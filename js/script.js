@@ -15,7 +15,6 @@ const PerPersonDisplay = document.getElementById("per-person");
 const resultDiv = document.querySelector("#results");
 
 const para = document.createElement("p");
-resultDiv.appendChild(para);
 
 function tipCalculator() {
   // select the input values and stored in a variable
@@ -23,6 +22,8 @@ function tipCalculator() {
   const tipInputValue = Number(tipInput.value.trim());
   // console.log(tipInputValue);
   const peopleInputValue = Number(peopleInput.value.trim());
+
+  resultDiv.appendChild(para);
 
   if (
     Number.isNaN(billInputValue) ||
@@ -39,7 +40,7 @@ function tipCalculator() {
     para.textContent =
       "please enter a positive number or percent less than or equal to 100";
   } else {
-    para.textContent = "";
+    resultDiv.removeChild(para);
     tipAmountDisplay.textContent = `$${billInputValue * (tipInputValue / 100)}`;
     totalAmountDisplay.textContent = `$${
       billInputValue * (tipInputValue / 100) + billInputValue
