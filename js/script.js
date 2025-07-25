@@ -47,14 +47,19 @@ function tipCalculator() {
     perPersonDisplay.textContent = "$0.00";
   } else {
     resultDiv.removeChild(para);
-    tipAmountDisplay.textContent = `$${billInputValue * (tipInputValue / 100)}`;
-    totalAmountDisplay.textContent = `$${
-      billInputValue * (tipInputValue / 100) + billInputValue
-    }`;
-    perPersonDisplay.textContent = `$${
+    const tipAmountDisp = billInputValue * (tipInputValue / 100);
+    const totalAmountDisp =
+      billInputValue * (tipInputValue / 100) + billInputValue;
+    const perPersonDisp =
       (billInputValue * (tipInputValue / 100) + billInputValue) /
-      peopleInputValue
-    }`;
+      peopleInputValue;
+    const tipTwoDecimal = tipAmountDisp.toFixed(2);
+    const totalTwoDecimal = totalAmountDisp.toFixed(2);
+    const perPersonTwoDecimal = perPersonDisp.toFixed(2);
+
+    tipAmountDisplay.textContent = `$${tipTwoDecimal}`;
+    totalAmountDisplay.textContent = `$${totalTwoDecimal}`;
+    perPersonDisplay.textContent = `$${perPersonTwoDecimal}`;
   }
 }
 
